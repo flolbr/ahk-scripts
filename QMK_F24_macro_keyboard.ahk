@@ -80,6 +80,7 @@ Down::Send, {F8} ; Step over
 Right::Send, {F7} ; Step into
 *::Send, ^{F8} ; Add/remove breakpoint
 c::Send, ^!+{F1} ; Reload CMake Project
+v::Send, !9 ; Version Control
 
 #if
 
@@ -101,7 +102,7 @@ Right::Send, {F11} ; Step into
 b::Send, {F7} ; build
 l::Send, {F8} ; load
 Enter::Send, {Enter} ; Enter
-r::Send, {F5} ; run
+Space::Send, {F5} ; run
 d::Send, ^{F5} ; debug
 BackSpace::Send, !dc ; Restart
 ; Space::Send, {F5} ; Pause/Resume
