@@ -76,12 +76,19 @@ b::Send, ^{F9} ; build
 r::Send, +{F10} ; run
 d::Send, +{F9} ; debug
 Space::Send, {F9} ; Pause/Resume
+Up::Send, +{F8} ; Step out
 Down::Send, {F8} ; Step over
+Left::Send, !{F9} ; Run to cursor
 Right::Send, {F7} ; Step into
 *::Send, ^{F8} ; Add/remove breakpoint
 c::Send, ^!+{F1} ; Reload CMake Project
 v::Send, !9 ; Version Control
+s::Send, ^+s ; SourceTree
+#if
 
+;; CLion
+#if (getKeyState("F24", "P") and if WinActive("ahk_exe clion64.exe"))
+k::Send, ^!+k ; Keil
 #if
 
 ;; Segger Embedded Studio
@@ -104,7 +111,7 @@ l::Send, {F8} ; load
 Enter::Send, {Enter} ; Enter
 Space::Send, {F5} ; run
 d::Send, ^{F5} ; debug
-BackSpace::Send, !dc ; Restart
+BackSpace::Send, {LAlt}dc ; Restart
 ; Space::Send, {F5} ; Pause/Resume
 Up::Send, ^{F11} ; Step out
 Down::Send, {F10} ; Step over
