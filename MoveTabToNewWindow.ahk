@@ -12,9 +12,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 	Send, ^c
 	Send, ^w
 	Send, ^n
-	Sleep, 200
+	Sleep, 1000
 	Send, ^v
-	Sleep, 100
+	Sleep, 200
 	Send, {Enter}
 Return
 #if
