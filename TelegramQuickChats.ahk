@@ -1,7 +1,7 @@
 #if WinActive("ahk_exe Telegram.exe")
-F1::^1
-F2::^2
-F3::^3
-F4::^4
-F5::^5
+F1::^2
+F2::^3
+F3::^4
+F4::^5
+VKDE::^1
 #if
