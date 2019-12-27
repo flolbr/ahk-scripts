@@ -2,6 +2,8 @@
 ; pressing down the mouse button rather than holding it down the whole time.
 ; This script requires v1.0.25+.
 
+#If not WinActive("Incrustation vidéo")
+
 ~MButton & LButton::
 LWin & LButton::
 RWin & LButton::
@@ -37,3 +39,5 @@ WinMove, ahk_id %EWD_MouseWin%,, EWD_WinX + EWD_MouseX - EWD_MouseStartX, EWD_Wi
 EWD_MouseStartX := EWD_MouseX  ; Update for the next timer-call to this subroutine.
 EWD_MouseStartY := EWD_MouseY
 return
+
+#If
