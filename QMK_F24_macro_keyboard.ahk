@@ -81,6 +81,7 @@ Down::Send, {F8} ; Step over
 Left::Send, !{F9} ; Run to cursor
 Right::Send, {F7} ; Step into
 *::Send, ^{F8} ; Add/remove breakpoint
+$::Send, ^{$} ; Mute breakpoints
 c::Send, ^!+{F1} ; Reload CMake Project
 v::Send, !9 ; Version Control
 s::Send, ^+s ; SourceTree
