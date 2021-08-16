@@ -27,6 +27,10 @@ ShellMessage( wParam,lParam ) {
         {
             SkipLicense()
         }
+        Else If (InStr(Trim(title), "J-Link") and InStr(Trim(title), " - Terms of use"))
+        {
+            SkipJlinkTerms()
+        }
         Else
         {
             ; TrayTip, Ozone, =%title%=
@@ -44,8 +48,27 @@ SkipLicense()
 {
     TrayTip, Ozone, Skipping license prompt
 
+    Sleep, 500
+
+    CoordMode, Mouse, Screen
     MouseGetPos, MouseX, MouseY
+    CoordMode, Mouse, Relative
     MouseClick, Left, 20, 215
     MouseClick, Left, 240, 175
+    CoordMode, Mouse, Screen
+    MouseMove, MouseX, MouseY
+}
+SkipJlinkTerms()
+{
+    TrayTip, J-Link, Skipping terms prompt
+
+    Sleep, 500
+
+    CoordMode, Mouse, Screen
+    MouseGetPos, MouseX, MouseY
+    CoordMode, Mouse, Relative
+    MouseClick, Left, 25, 283
+    MouseClick, Left, 480, 283
+    CoordMode, Mouse, Screen
     MouseMove, MouseX, MouseY
 }
