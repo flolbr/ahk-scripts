@@ -41,3 +41,8 @@ EWD_MouseStartY := EWD_MouseY
 return
 
 #If
+
+#c::
+WinGetPos, X, Y, width, height, A
+MouseMove, width / 2, height / 2,
+return
